@@ -1,34 +1,24 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
-interface IHeaderProps {
-  role: string;
-  name: string;
-  social: {
-    linkedin: string;
-    github: string;
-  };
-}
-interface IHeaderState {}
-
-export default class Header extends Component<IHeaderProps, IHeaderState> {
-  constructor(props) {
-    super(props);
-  }
+export default class About extends Component {
   render() {
-    const { name, social, role } = this.props;
     return (
-      <div>
-        <div className="pt-20 text-center">
-          <h1>
-            <span className="text-gray-700 font-extrabold text-5xl">
-              Hi, I am{" "}
-            </span>
-            <span className="text-[#2978b5] font-extrabold text-5xl">
-              {name}.
-            </span>
-          </h1>
-          <h2 className="text-4xl p-6">A {role}.</h2>
-        </div>
+      <div className="p-2 ml-2">
+        <h1 className="text-4xl ">About me</h1>
+        <p >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          exercitationem cumque ipsum veritatis aliquam autem. Voluptates
+          numquam praesentium magni blanditiis accusantium a. Magni vitae ullam
+          mollitia tempora rerum, accusamus voluptate. Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Maiores exercitationem cumque ipsum
+          veritatis aliquam autem. Voluptates numquam praesentium magni
+          blanditiis accusantium a. Magni vitae ullam mollitia tempora rerum,
+          accusamus voluptate. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Maiores exercitationem cumque ipsum veritatis
+          aliquam autem. Voluptates numquam praesentium magni blanditiis
+          accusantium a. Magni vitae ullam mollitia tempora rerum, accusamus
+          voluptate.
+        </p>
       </div>
     );
   }
