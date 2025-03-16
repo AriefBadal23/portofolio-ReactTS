@@ -5,8 +5,8 @@ export default function Navigation() {
   const [activeTab, setActiveTab] = useState("ABOUT");
 
   return (
-    <nav className="flex justify-center space-x-8">
-      {["ABOUT", "EXPERIENCE", "PROJECTS"].map((tab) => (
+    <nav className="flex justify-center space-x-8 mt-4">
+      {["ABOUT", "PROJECTS"].map((tab) => (
         <a
           key={tab}
           href={`#${tab.toLowerCase()}`} // Link naar het ID van de sectie
