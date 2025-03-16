@@ -1,23 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class About extends Component {
   render() {
     return (
-      <div className="p-2 ml-2">
-        <h1 className="text-4xl ">About me</h1>
-        <p >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-          exercitationem cumque ipsum veritatis aliquam autem. Voluptates
-          numquam praesentium magni blanditiis accusantium a. Magni vitae ullam
-          mollitia tempora rerum, accusamus voluptate. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Maiores exercitationem cumque ipsum
-          veritatis aliquam autem. Voluptates numquam praesentium magni
-          blanditiis accusantium a. Magni vitae ullam mollitia tempora rerum,
-          accusamus voluptate. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Maiores exercitationem cumque ipsum veritatis
-          aliquam autem. Voluptates numquam praesentium magni blanditiis
-          accusantium a. Magni vitae ullam mollitia tempora rerum, accusamus
-          voluptate.
+      <div className="mt-10 px-10" id="about">
+        <h3 className="bg-[#0f172a] sticky top-0">About</h3>
+        <p className="font-light">
+          Mijn naam is Arief, een gedreven tweedejaars student Informatica met
+          een achtergrond in een afgeronde Associate degree. Tijdens mijn studie
+          heb ik niet alleen theoretische kennis opgebouwd, maar ook waardevolle
+          praktijkervaring opgedaan. een achtergrond in een afgeronde Associate
+          degree. Tijdens mijn studie heb ik niet alleen theoretische kennis
+          opgebouwd, maar ook waardevolle praktijkervaring opgedaan.
         </p>
       </div>
     );

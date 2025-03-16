@@ -1,19 +1,28 @@
 import './App.css'
-import  NavBar  from "./NavBar";
+import  Navigation  from "./NavBar";
 import  Header  from "./Header";
-import  About  from "./About";
+import About from "./About";
+
+import { useEffect } from 'react';
+
 import  ProjectContainer  from "./ProjectContainer";
 function App() {
+  useEffect(() => {
+    document.documentElement.classList.add('dark');
+  }, []); // Alleen bij het laden van de app
 
   return (
-    <>
-      <NavBar />
-      <Header name='Arief Badal' role='Software Developer' />
+    <div className='dark'>
+      <Navigation/>
+      <Header name='Arief Badal' role='Aspiring back-end developer, .NET and Cloud enthusiast' />
       <About />
       <ProjectContainer/>
+    </div>
 
-    </>
   )
 }
 
 export default App
+
+// Padding tussen navbar en Introduction
+// Navbar hiden op mobile en links op desktop.
