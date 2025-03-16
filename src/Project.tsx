@@ -15,8 +15,8 @@ export default class Project extends Component<IProjectProps> {
   render() {
     return (
       <>
-        <p className="text-2xl">{this.props.title}</p>
-        <div className="w-full h-fit flex">
+        <p className="text-xl  font-bold">{this.props.title}</p>
+        <div className="w-full h-fit flex]">
           <div className="flex-1 mb-10 ">
             <p>{this.props.description}</p>
             <img
@@ -26,12 +26,12 @@ export default class Project extends Component<IProjectProps> {
               width={200}
               height={112.5}
             ></img>
-              <div className="rounded-xl  text-center h-fit mt-1 flex flex-row  m-2 space-x-5">
-            {this.props.tools.map((tool) => (
+            <div className="rounded-xl  text-center h-fit mt-1 flex flex-row  m-2 space-x-5">
+              {this.props.tools.map((tool) => (
                 <p className="bg-[#112B3A] text-[#59DFCB] rounded-2xl w-[60px] mt-2">
                   {tool}
                 </p>
-            ))}
+              ))}
             </div>
           </div>
         </div>

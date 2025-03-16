@@ -17,9 +17,11 @@ export default class Header extends Component<IHeaderProps, IHeaderState> {
   render() {
     const { name, social, role } = this.props;
     return (
-      <div className="mt-10 px-10 py-6">
-        <h1 className="py-2 text-2xl">Hi, I'm Arief Badal</h1>
-        <h2 className="my-0 text-[#0F9C85] text-2xl">Software Developer</h2>
+      <div className="mt-10 px-10 py-6 md:fixed left-0">
+        <h1 className="py-2 text-2xl md:text-4xl ">Hi, I'm Arief Badal</h1>
+        <h2 className="my-0 text-[#0F9C85] text-2xl md:text-4xl">
+          Software Developer
+        </h2>
         <p className="py-2 font-light">{role}</p>
         <div className=" flex px-3 space-x-4">
           <svg

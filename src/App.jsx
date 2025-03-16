@@ -8,16 +8,16 @@ import { useEffect } from 'react';
 import  ProjectContainer  from "./ProjectContainer";
 function App() {
 
-  let projects = [{title: "Image Service", url: "https://www.google.com", description:"Image service description", tools:["Python", "C#"]}]
+  let projects = [{title: "Image Service", url: "https://www.google.com", description:"Image service description", tools:["Python", "C#"]},{title: "Image Service", url: "https://www.google.com", description:"Image service description", tools:["Python", "C#"]},{title: "Image Service", url: "https://www.google.com", description:"Image service description", tools:["Python", "C#"]},{title: "Image Service", url: "https://www.google.com", description:"Image service description", tools:["Python", "C#"]}]
   useEffect(() => {
     document.documentElement.classList.add('dark');
   }, []); // Alleen bij het laden van de app
 
   return (
     <div className='dark'>
-      <Navigation/>
       <Header name='Arief Badal' role='Aspiring back-end developer, .NET and Cloud enthusiast' />
       <About />
+      <Navigation/>
       <ProjectContainer projects={projects}/>
     </div>
 
