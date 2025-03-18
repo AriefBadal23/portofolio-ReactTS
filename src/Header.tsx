@@ -20,10 +20,11 @@ export default class Header extends Component<IHeaderProps, IHeaderState> {
       <div className="mt-10 px-10 py-6 md:fixed left-0">
         <h1 className="py-2 text-2xl md:text-4xl ">Hi, I'm Arief Badal</h1>
         <h2 className="my-0 text-[#0F9C85] text-2xl md:text-4xl">
-          Software Developer
+          a Software Developer
         </h2>
         <p className="py-2 font-light">{role}</p>
-        <div className=" flex px-3 space-x-4">
+
+        <div className=" flex px-3 py-2 space-x-4 p-8">
           <svg
             width={25}
             height={25}
@@ -40,6 +41,7 @@ export default class Header extends Component<IHeaderProps, IHeaderState> {
             height={25}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
+            href="https://google.com"
           >
             <path
               fill="#c0c0c0"
@@ -47,6 +49,9 @@ export default class Header extends Component<IHeaderProps, IHeaderState> {
             />
           </svg>
         </div>
+        {/* <p className=" md: block font-light p-0 my-10">
+          Curious about my work? Check out my projects or send me a message!
+        </p> */}
       </div>
     );
   }

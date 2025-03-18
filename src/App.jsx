@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className='dark'>
-      <Header name='Arief Badal' role='Aspiring back-end developer, .NET and Cloud enthusiast' />
+      <Header name='Arief Badal' role='Aspiring Backend .NET Developer | Skilled in C#, WebAPIs & Cloud' />
       <About />
       <Navigation/>
       <ProjectContainer projects={projects}/>

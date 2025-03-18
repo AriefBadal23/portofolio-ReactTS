@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 export default function Navigation() {
-  const [activeTab, setActiveTab] = useState("ABOUT");
+  const [activeTab, setActiveTab] = useState("ABOUT ME");
 
   useEffect(() => {
     // Create an IntersectionObserver to track when the sections come into view
@@ -17,8 +17,8 @@ export default function Navigation() {
       { threshold: 0.5 } // Trigger when 50% of the section is in view
     );
 
-    // Observe each section with the corresponding id (about, projects, etc.)
-    ["about", "projects"].forEach((id) => {
+    // Observe each section with the corresponding id (about me, projects, etc.)
+    ["about me", "skills", "projects"].forEach((id) => {
       const element = document.getElementById(id);
       if (element) observer.observe(element);
     });
@@ -30,7 +30,7 @@ export default function Navigation() {
 
   return (
     <nav className="flex md:flex-col fixed mt-10 ml-10 left-0 pt-20">
-      {["ABOUT", "PROJECTS"].map((tab) => (
+      {["ABOUT ME","SKILLS", "PROJECTS"].map((tab) => (
         <a
           key={tab}
           href={`#${tab.toLowerCase()}`} // Link naar het ID van de sectie
