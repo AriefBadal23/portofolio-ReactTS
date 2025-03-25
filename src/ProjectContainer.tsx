@@ -24,6 +24,7 @@ export default class ProjectContainer extends Component<
               description={project.description}
               url={project.url}
               tools={project.tools}
+              image={project.image}
             />
           ))}
         </div>

@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class About extends Component {
   render() {
     return (
-      <div className=" mt-10 px-10 " id="about">
+      <div className=" mt-10 px-10 " id="about me">
         <h3 className="bg-[#0f172a] sticky top-0 md:ml-150 md: text-2xl">
           About Me
         </h3>
