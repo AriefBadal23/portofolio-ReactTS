@@ -2,7 +2,6 @@
   "name": "keuzevak",
   "private": true,
   "homepage": "https://AriefBadal23.github.io/portofolio-ReactTS/",
-
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -12,16 +11,16 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
-
-    
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@tailwindcss/vite": "^4.0.12",
+    "gsap": "^3.12.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "split-type": "^0.3.4",
     "tailwindcss": "^4.0.12"
   },
   "devDependencies": {
