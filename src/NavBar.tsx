@@ -19,7 +19,7 @@ export default function Navigation() {
     );
 
     // Observe the sections
-    ["about me", "projects"].forEach((id) => {
+    ["about me", "projects", "skills"].forEach((id) => {
       const element = document.getElementById(id);
       if (element) observer.observe(element);
     });
@@ -28,7 +28,7 @@ export default function Navigation() {
   }, []);
 
   return (
-    <nav className="flex md:flex-col fixed mt-10 ml-10 left-0 pt-20">
+    <nav className="flex md:flex-col fixed mt-20 ml-10 left-0 pt-20">
       {["ABOUT ME", "PROJECTS", "SKILLS"].map((tab) => (
         <a
           key={tab}
