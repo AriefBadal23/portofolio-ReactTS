@@ -1,4 +1,7 @@
+import gsap from "gsap";
 import React, { Component } from "react";
+import SplitType from "split-type";
+import { useGSAP } from "@gsap/react";
 
 interface IHeaderProps {
   role: string;
@@ -14,11 +17,33 @@ export default class Header extends Component<IHeaderProps, IHeaderState> {
   constructor(props) {
     super(props);
   }
+
+  componentDidMount() { // do this for each time the page is loaded for the first time.
+    let text = new SplitType("#name", { types: "chars" });
+
+    // Select all characters
+    let characters = document.querySelectorAll(".char");
+
+    // Start the typing effect animation
+    gsap.set(".char", { opacity: 0, y: 0 }); 
+
+    characters.forEach((char, i) => {
+      gsap.to(char, {
+        opacity: 1, 
+        y: 0, 
+        duration: 0.1, 
+        delay: i * 0.1, // Add a delay between each character's animation for the typing effect
+        ease: "none", // No easing
+      });
+    });
+  }
   render() {
     const { name, social, role } = this.props;
     return (
       <div className="mt-10 px-10 py-6 md:fixed left-0">
-        <h1 className="py-2 text-2xl md:text-4xl ">Hi, I'm Arief Badal</h1>
+        <h1 id="name" className="py-2 text-2xl md:text-4xl ">
+          Hi, I'm Arief Badal
+        </h1>
         <h2 className="my-0 text-[#0F9C85] text-2xl md:text-4xl">
           a Software Developer
         </h2>
@@ -56,12 +81,12 @@ export default class Header extends Component<IHeaderProps, IHeaderState> {
           </svg>
         </div>
 
-          <a
-            href="https://nl.linkedin.com/in/arief-badal"
-            className="border-2 p-2 rounded-2xl font-semibold bg-[#0F9C85] hover:bg-sky-700 inline-block"
-          >
-            Message Me
-          </a>
+        <a
+          href="https://nl.linkedin.com/in/arief-badal"
+          className="border-2 p-2 rounded-2xl font-semibold bg-[#0F9C85] hover:bg-sky-700 inline-block"
+        >
+          Message Me
+        </a>
         {/* <p>I'm open to opportunities! Feel free to message me on LinkedIn.</p> */}
 
         {/* <p className=" md: block font-light p-0 my-10">
