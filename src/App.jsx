@@ -20,7 +20,7 @@ function App() {
       <About about={portoflio.about} />
       <Navigation/>
       <ProjectContainer projects={portoflio.projects} />
-      <Skills skills={portoflio.skills}/>
+      <Skills skills={portoflio.skills} />
     </div>
 
   )

@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 
-interface IAboutProps{
-  about: string
+interface IAboutProps {
+  about: string;
 }
-
 
 export default class About extends Component<IAboutProps> {
   constructor(props: IAboutProps) {
