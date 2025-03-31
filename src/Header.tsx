@@ -1,7 +1,6 @@
 import gsap from "gsap";
 import React, { Component } from "react";
 import SplitType from "split-type";
-import { useGSAP } from "@gsap/react";
 
 interface IHeaderProps {
   role: string;
@@ -14,24 +13,25 @@ interface IHeaderProps {
 interface IHeaderState {}
 
 export default class Header extends Component<IHeaderProps, IHeaderState> {
-  constructor(props) {
+  constructor(props:IHeaderProps) {
     super(props);
   }
 
-  componentDidMount() { // do this for each time the page is loaded for the first time.
+  componentDidMount() {
+    // do this for each time the page is loaded for the first time.
     let text = new SplitType("#name", { types: "chars" });
 
     // Select all characters
     let characters = document.querySelectorAll(".char");
 
     // Start the typing effect animation
-    gsap.set(".char", { opacity: 0, y: 0 }); 
+    gsap.set(".char", { opacity: 0, y: 0 });
 
     characters.forEach((char, i) => {
       gsap.to(char, {
-        opacity: 1, 
-        y: 0, 
-        duration: 0.1, 
+        opacity: 1,
+        y: 0,
+        duration: 0.1,
         delay: i * 0.1, // Add a delay between each character's animation for the typing effect
         ease: "none", // No easing
       });
@@ -47,7 +47,7 @@ export default class Header extends Component<IHeaderProps, IHeaderState> {
         <h2 className="my-0 text-[#0F9C85] text-2xl md:text-4xl">
           a Software Developer
         </h2>
-        <p className="py-2 font-light">{role}</p>
+        <p className="py-2 font-light md:text-wrap">{role}</p>
 
         <div className=" flex px-3 py-2 space-x-4 p-8">
           <a href="https://github.com/AriefBadal23" target="_blank">
@@ -85,7 +85,7 @@ export default class Header extends Component<IHeaderProps, IHeaderState> {
           href="https://nl.linkedin.com/in/arief-badal"
           className="border-2 p-2 rounded-2xl font-semibold bg-[#0F9C85] hover:bg-sky-700 inline-block"
         >
-          Message Me
+          Message Me on LinkedIn
         </a>
         {/* <p>I'm open to opportunities! Feel free to message me on LinkedIn.</p> */}
 

@@ -21,7 +21,7 @@ export default class Project extends Component<IProjectProps> {
         <div className="w-full h-fit flex">
           <div className="flex-row mb-10 flex items-center space-x-4 ">
             <img
-              className="flex-shrink-1 hidden md:block"
+              className="hidden md:block"
               src={this.props.image}
               alt="project-1"
               width={150}

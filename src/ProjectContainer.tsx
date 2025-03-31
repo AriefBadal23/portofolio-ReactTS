@@ -15,9 +15,9 @@ export default class ProjectContainer extends Component<
   }
   render() {
     return (
-      <div className="mt-10 px-10 md:ml-150" id="projects">
+      <div className="mt-10 px-10 md:ml-150">
         <h3 className="bg-[#0f172a] sticky top-0 text-2xl">Projects</h3>
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap" id="projects" >
           {this.props.projects.map((project) => (
             <Project
               title={project.title}
