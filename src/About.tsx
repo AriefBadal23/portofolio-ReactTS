@@ -10,9 +10,9 @@ export default class About extends Component<IAboutProps> {
   }
   render() {
     return (
-      <div className=" mt-10 px-10" id="about me">
+      <div className=" mt-10 px-10" id="about">
         <h3 className="bg-[#0f172a] sticky top-0 text-2xl md:ml-150 ">
-          About Me
+          About me
         </h3>
         <p className="font-light md:text-left md:ml-150 text-l ">
           {this.props.about}

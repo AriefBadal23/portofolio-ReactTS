@@ -1,51 +1,47 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Navigation() {
-  const [activeTab, setActiveTab] = useState("ABOUT ME");
-
+  const [activeTab, setActiveTab] = useState("about");
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const Observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          // If the section is 50% visible, we set it as active
-          if (entry.isIntersecting) {
-            setActiveTab(entry.target.id.toUpperCase());
+        // callback function to let know what should happen
+        console.log(entries);
+        entries.forEach((entrie) => {
+          if (entrie.isIntersecting) {
+            setActiveTab(entrie.target.id);
           }
         });
       },
-      {
-        threshold: [0.1, 0.5, 0.9], // Added multiple thresholds for smoother transitions
-      }
+      { threshold: 1 }
     );
-
-    // Observe the sections
-    ["about me", "projects", "skills"].forEach((id) => {
-      const element = document.getElementById(id);
-      if (element) observer.observe(element);
+    ["about", "projects", "skills"].forEach((tab) => {
+      const section = document.getElementById(`${tab}`);
+      Observer.observe(section as Element);
     });
-
-    return () => observer.disconnect(); // Cleanup observer on component unmount
+    return () => Observer.disconnect();
   }, []);
 
   return (
-    <nav className="flex md:flex-col fixed mt-20 ml-10 left-0 pt-20">
-      {["ABOUT ME", "PROJECTS", "SKILLS"].map((tab) => (
+    // toevoegen en rekening meehouden voor grotere schermen!
+    <nav className="flex md:flex-col fixed  ml-10 left-0 pt-20"> 
+      {["about", "projects", "skills"].map((tab) => (
         <a
-          key={tab}
-          href={`#${tab.toLowerCase()}`} // Link to the section
+          href={tab}
+          onClick={(e) => {
+            e.preventDefault();
+            setActiveTab(tab);
+          }}
           className={`text-lg font-medium pb-2 ${
             activeTab === tab
               ? "text-accent border-b-4 border-accent md:border-b-2 p-2 w-50"
               : "text-gray-400 hover:text-accent"
-          }`}
-          onClick={(e) => {
-            e.preventDefault(); // Prevent default anchor behavior
-            setActiveTab(tab); // Update active tab
-            document.getElementById(tab.toLowerCase())
-              .scrollIntoView({ behavior: "smooth" }); // Smooth scroll to section
-          }}
+          }
+        
+        
+        `}
         >
-          {tab}
+          {tab.toUpperCase()}
         </a>
       ))}
     </nav>
