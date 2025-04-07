@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 
 import  ProjectContainer  from "./ProjectContainer";
 import Skills from './Skills';
-import { portoflio} from './portofolio'
+import { portoflio } from './portofolio'
 
 function App() {
 

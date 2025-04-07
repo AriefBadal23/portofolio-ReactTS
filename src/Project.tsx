@@ -21,12 +21,13 @@ export default class Project extends Component<IProjectProps> {
         <div className="w-full h-fit flex">
           <div className="flex-row mb-10 flex items-center space-x-4">
             <img
-              className="hidden md:block "
+              className="hidden md:block"
+              height={300}
+              width={300}
               src={this.props.image}
               alt="project-1"
-              width={150}
-              height={200.5}
             />
+
             <div>
               <p className="text-l">{this.props.description}</p>
               <div className="rounded-xl text-center h-fit mt-1 flex flex-row m-2 space-x-2">
