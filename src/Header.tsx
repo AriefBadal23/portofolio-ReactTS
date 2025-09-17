@@ -61,14 +61,6 @@ export default class Header extends Component<IHeaderProps, IHeaderState> {
               <img src="linkedin2.png" width={33} height={30} alt="LinkedIn" />
             </div>
           </a>
-          <a
-            href="https://nl.linkedin.com/in/arief-badal"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border-2 p-2 rounded-2xl font-semibold bg-[#0F9C85] hover:bg-sky-700 block text-center"
-          >
-            Send a message
-          </a>
         </div>
       </div>
     );
