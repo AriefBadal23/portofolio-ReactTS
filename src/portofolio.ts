@@ -1,9 +1,9 @@
 
 export const portoflio = {
-  "about": `I'm a second-year Computer Science student experienced in both team 
+  "about": `I'm a last year Computer Science student experienced in both team 
     and individual projects. I specialize in backend development using C#, 
     building secure WebAPIs, and ensuring efficient data flow to the frontend. 
-    I also work with Python, ReactJS, Docker, and PostgreSQL, and have a keen 
+    I also work with Python, ReactJS, Typescript, Docker, and PostgreSQL, and have a keen 
     interest in cloud development and scalable applications. I strive to create 
     secure, scalable, and maintainable solutions while continuously expanding my skills.
     `,
@@ -35,26 +35,15 @@ export const portoflio = {
       tools: ["ASP.NET Core", "C#", "Blazor"],
       image: "todone.png"
     }
-
-    ,
-    {
-      title: "Simple Blog API with Blazor UI",
-      url: "https://www.google.com",
-      description: `An ASP.NET Core Blog CRUD API . A user can Create, Read, Update and Delete and Blog post.
-       For the frontend I have used Blazor components and use HttpClient to connect with the API.`,
-      tools: ["ASP.NET Core", "C#", "Blazor"],
-      image: "SimpleBlog.png"
-    }
-
-
+    
   ],
 
   "skills": [
     "Python",
     "C#",
     "ASP.NET Core",
-    "ReactJS",
-    "JavaScript",
+    "ReactTS",
+    "Typescript",
     "PostgreSQL",
     "Entity Framework Core",
     "Docker",
